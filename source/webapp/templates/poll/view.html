@@ -6,9 +6,11 @@
      <p>Date: {{ poll.creation_date }}</p>
     {% if choices %}
         <h4>Choices for this question</h4>
-     {% for choice in choices %}
-        <span>{{ forloop.counter }}</span>
-        <p>{{ choice.choice_text }}</p>
+        {% for choice in choices %}
+            <span>{{ forloop.counter }}</span>
+            <p>{{ choice.choice_text }}</p>
+            <p class="fst-italic"><a href="{% url 'choice_edit' choice.pk %}">Edit choice</a></p>
+            <p class="fst-italic"><a href="{% url 'choice_delete' choice.pk %}">Delete choice</a></p>
     {% endfor %}
     {% endif %}
     {% if not choices %}
