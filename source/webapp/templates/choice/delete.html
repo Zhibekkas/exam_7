@@ -1,0 +1,11 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <form method="POST">
+    {% csrf_token %}
+        <h2> Are you sure you want to delete {{ choice.description }}</h2>
+        {% include 'partial/form.html' %}
+     <input class="btn btn-primary mb-3" type="submit" value="Delete"/>
+    </form>
+    <a class="btn btn-primary mb-3" href="{% url "poll_index" %}">Cancel</a>
+{% endblock %}

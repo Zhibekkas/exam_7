@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block title %}Answers{% endblock %}
+{% block content %}
+    <h1>Answer the questions</h1>
+    {% for i in answers %}
+     <h4>{{ i }}</h4>
+     {% endfor %}
+    <input type="submit" value="Answer"/>
+    </form>
+{% endblock %}
+
+
+

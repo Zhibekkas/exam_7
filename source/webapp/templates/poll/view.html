@@ -11,6 +11,7 @@
             <p>{{ choice.choice_text }}</p>
             <p class="fst-italic"><a href="{% url 'choice_edit' choice.pk %}">Edit choice</a></p>
             <p class="fst-italic"><a href="{% url 'choice_delete' choice.pk %}">Delete choice</a></p>
+            <p class="fst-italic"><a href="{% url 'answer' %}">Answer</a></p>
     {% endfor %}
     {% endif %}
     {% if not choices %}

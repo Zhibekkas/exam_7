@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+{% block title %}Add new choice{% endblock %}
+{% block nav %}{% endblock %}
+{% block content %}
+<h1 class = 'text-center text-primary text-uppercase'>Add new choice</h1>
+<form method="post">
+    {%include "partial/form.html" %}
+    <input type="submit" value="Add"/>
+</form>
+{% endblock %}

@@ -10,7 +10,8 @@
                 <p class="fst-italic"><a href="{% url "poll_view" p.pk %}">More information...</a></p>
                  <p class="fst-italic"><a href="{% url "poll_edit" p.pk %}">Edit</a></p>
                 <p class="fst-italic"><a href="{% url "poll_delete" p.pk %}">Delete</a></p>
-                <p class="fst-italic"><a href="{% url 'choice_add' p.pk %}">Add new choice for this poll</a></p>
+                <p class="fst-italic"><a href="{% url 'choice_add' p.pk %}">Add new choice for this poll</a>
+                <p class="fst-italic"><a href="{% url 'answer' %}">Answer</a></p>
             </div>
         </div>
     {% endfor %}
