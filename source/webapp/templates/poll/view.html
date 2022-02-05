@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}Poll details {{ poll.pk }}{% endblock %}
+{% block content %}
+    <h1>Poll question: {{ poll.question }}</h1>
+     <p>Date: {{ poll.creation_date }}</p>
+    {% if choices %}
+        <h4>Choices for this question</h4>
+     {% for choice in choices %}
+        <span>{{ forloop.counter }}</span>
+        <p>{{ choice.choice_text }}</p>
+    {% endfor %}
+    {% endif %}
+    {% if not choices %}
+        <p>Choices: No choices for this question</p>
+    {% endif %}
+{% endblock %}

@@ -1,0 +1,11 @@
+{% extends 'base.html' %}
+
+{% block title %}Create a question{% endblock %}
+
+{% block content %}
+    <h1>Add new question for the poll</h1>
+    <form action="" method="post">
+        {% include 'partial/form.html' %}
+    <input type="submit" value="Add"/>
+    </form>
+{% endblock %}

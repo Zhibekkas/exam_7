@@ -1,0 +1,20 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1 class="text-center text-uppercase fw-bold fst-italic mb-5 mt-3">Poll</h1>
+    <div class="row row-cols-1 row-cols-md-3 g-4 mb-3">
+    {% for p in poll %}
+        <div class="card" style="width: 18rem;">
+            <div class="card-body">
+                <h5 class="card-title fw-bolder">{{ p.question }}</h5>
+                <p class="fst-italic"><a href="{% url "poll_view" p.pk %}">More information...</a></p>
+                 <p class="fst-italic"><a href="{% url "poll_edit" p.pk %}">Edit</a></p>
+                <p class="fst-italic"><a href="{% url "poll_delete" p.pk %}">Delete</a></p>
+            </div>
+        </div>
+    {% endfor %}
+    </div>
+      <div>{% if is_paginated %}
+   {% include 'partial/pagination.html' %}
+{% endif %}</div>
+{% endblock %}

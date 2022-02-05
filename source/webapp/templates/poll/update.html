@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Update project details{% endblock %}
+{% block nav %}
+    <li class="nav-item">
+        <a class="nav-link" href="{% url 'poll_view' poll.pk%}">Back to poll information</a>
+    </li>{% endblock %}
+{% block content %}
+    <h1>Update Question</h1>
+    <form method="post">
+        {% include "partial/form.html" %}
+    <input type="submit" value="Update"/>
+    </form>
+
+{% endblock %}
